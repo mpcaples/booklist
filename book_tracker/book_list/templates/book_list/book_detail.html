@@ -1,0 +1,21 @@
+{% extends "book_list/base.html" %}
+
+{% block title %}
+    {{title}}
+{%endblock%}
+
+{% block content %}
+
+<h1>{{title}}</h2>
+<h2>{{author}}</h2>
+<p>Published in {{year_published}} by {{publisher}}</p>
+<p>{{page_count}} pages long</p>
+<p><p/>
+<p>I rated {{title}} {{my_rating}} out of 5
+{% if is_bestseller%}
+    and it is a bestseller
+{%else%}
+    but it isn't a bestseller.
+{%endif%}
+</p>
+{% endblock %}

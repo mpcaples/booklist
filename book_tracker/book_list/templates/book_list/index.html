@@ -1,0 +1,18 @@
+{% extends "book_list/base.html"%}
+
+{% block title %}
+    Books Read in 2022
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for book in books %}
+        <li><a href="{{ book.get_absolute_url }}">{{book.title|title}}</a></li>
+        {% endfor %}
+    </ul>
+
+<hr>
+<h3>Total number of books: {{total_number_of_books}}</h3>
+<h3>Average page count: {{average_page_count.page_count__avg}}
+
+{% endblock %}
